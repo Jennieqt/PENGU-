@@ -1,0 +1,336 @@
+body {
+    overflow-x: hidden;
+    background-image: url("./blue-frost-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+/* CSS code above */
+
+/* Responsive design for medium screens/tablets */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 24px;
+    }
+    
+    nav ul li a {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 2.5em;
+    }
+    
+    .big-box p {
+        font-size: 1.5em;
+    }
+
+    .big-box button {
+        font-size: 2em;
+    }
+
+    .about-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Responsive design for small screens/mobile */
+@media only screen and (max-width: 480px) {
+    header {
+        font-size: 20px;
+    }
+    
+    nav ul li a {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .big-box p {
+        font-size: 1.2em;
+    }
+
+    .big-box button {
+        font-size: 1.8em;
+    }
+
+    .about-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* CSS code below */
+
+
+nav {
+    z-index: 100;
+    position: relative;
+}
+
+#about .about-image {
+    transition: transform 0.3s ease;
+}
+
+#about .about-image:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+header {
+    font-family: 'IceAge', sans-serif;
+    color: black;
+    padding: 20px 0;
+    font-size: 40px;
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+#logo {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+    animation: logoAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+nav {
+    z-index: 100;
+    position: relative;
+    background: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    font-family: 'IceAge', sans-serif;
+    color: #021f29;
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: bold;
+    transition: color 0.1s ease;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    cursor: pointer;
+}
+.footer-container {
+    background-color: #03374a;
+    padding: 20px;
+    text-align: center;
+}
+
+.disclaimer-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.disclaimer {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #add8e6;
+}
+
+section {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#cursor {
+    width: 20px;
+    height: 20px;
+    background: #4682B4;
+    position: absolute;
+    border-radius: 50%;
+    transition: ease 0.2s;
+    pointer-events: none;
+}
+
+.animate {
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.section-title {
+    font-size: 4.5em;
+    text-align: center;
+    color: #ADD8E6;
+    margin-bottom: 20px;
+}
+.content-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.section-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-image {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+@font-face {
+    font-family: 'IceAge';
+    src: url('./ICE_AGE.ttf') format('woff'),
+         url('./ICE_AGE.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.section-title {
+    font-family: 'IceAge', sans-serif;
+}
+
+#contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#contact h2 {
+    font-size: 4.5em;
+    color: #ADD8E6;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#contact a {
+    display: inline-block;
+    background-color: #4682B4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contact a:hover {
+    background-color: #ff4c32;
+}
+
+.about-image {
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.big-box {
+    background-color: #03374a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center; /* Added property */
+}
+
+.big-box p {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center; /* Added property */
+}
+
+.big-box button {
+    background-color: #ff6347;
+    color: #ffffff;
+    border: none;
+    font-size: 2.5em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.big-box button:hover {
+    background-color: #d64233;
+}
+
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    background-image: url('./animation.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: logoAnimation 1s ease-in-out infinite alternate;
+}
+
